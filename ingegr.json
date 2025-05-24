@@ -1,0 +1,322 @@
+[
+    {
+        "Categoria": "Sueldo",
+        "Tipo": "I",
+        "Cantidad": 3000,
+        "Fecha": "2025-04-01",
+        "Periodo": "202504",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Alimentos",
+        "Tipo": "E",
+        "Cantidad": 120,
+        "Fecha": "2025-04-02",
+        "Periodo": "202504",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Transporte",
+        "Tipo": "E",
+        "Cantidad": 80,
+        "Fecha": "2025-04-03",
+        "Periodo": "202504",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Vivienda",
+        "Tipo": "E",
+        "Cantidad": 1600,
+        "Fecha": "2025-04-04",
+        "Periodo": "202504",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Educacion",
+        "Tipo": "E",
+        "Cantidad": 500,
+        "Fecha": "2025-04-05",
+        "Periodo": "202504",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Salud",
+        "Tipo": "E",
+        "Cantidad": 450,
+        "Fecha": "2025-04-06",
+        "Periodo": "202504",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Ahorro",
+        "Tipo": "I",
+        "Cantidad": 900,
+        "Fecha": "2025-04-07",
+        "Periodo": "202504",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Entretenimiento",
+        "Tipo": "E",
+        "Cantidad": 260,
+        "Fecha": "2025-04-08",
+        "Periodo": "202504",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Hogar",
+        "Tipo": "E",
+        "Cantidad": 180,
+        "Fecha": "2025-04-09",
+        "Periodo": "202504",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Regalos y donaciones",
+        "Tipo": "E",
+        "Cantidad": 140,
+        "Fecha": "2025-04-10",
+        "Periodo": "202504",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Sueldo",
+        "Tipo": "I",
+        "Cantidad": 5200,
+        "Fecha": "2025-04-15",
+        "Periodo": "202504",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Ahorro",
+        "Tipo": "I",
+        "Cantidad": 80,
+        "Fecha": "2025-04-16",
+        "Periodo": "202504",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Alimentos",
+        "Tipo": "E",
+        "Cantidad": 480,
+        "Fecha": "2025-04-17",
+        "Periodo": "202504",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Transporte",
+        "Tipo": "E",
+        "Cantidad": 310,
+        "Fecha": "2025-04-18",
+        "Periodo": "202504",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Educacion",
+        "Tipo": "E",
+        "Cantidad": 580,
+        "Fecha": "2025-04-30",
+        "Periodo": "202504",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Alimentos",
+        "Tipo": "E",
+        "Cantidad": 120,
+        "Fecha": "2025-05-01",
+        "Periodo": "202505",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Alimentos",
+        "Tipo": "E",
+        "Cantidad": 200,
+        "Fecha": "2025-05-04",
+        "Periodo": "202505",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Alimentos",
+        "Tipo": "E",
+        "Cantidad": 250,
+        "Fecha": "2025-05-07",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Transporte",
+        "Tipo": "E",
+        "Cantidad": 150,
+        "Fecha": "2025-05-02",
+        "Periodo": "202505",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Transporte",
+        "Tipo": "E",
+        "Cantidad": 180,
+        "Fecha": "2025-05-05",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Vivienda",
+        "Tipo": "E",
+        "Cantidad": 1400,
+        "Fecha": "2025-05-03",
+        "Periodo": "202505",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Vivienda",
+        "Tipo": "E",
+        "Cantidad": 200,
+        "Fecha": "2025-05-06",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Salud",
+        "Tipo": "E",
+        "Cantidad": 300,
+        "Fecha": "2025-05-08",
+        "Periodo": "202505",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Salud",
+        "Tipo": "E",
+        "Cantidad": 200,
+        "Fecha": "2025-05-09",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Entretenimiento",
+        "Tipo": "E",
+        "Cantidad": 200,
+        "Fecha": "2025-05-10",
+        "Periodo": "202505",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Entretenimiento",
+        "Tipo": "E",
+        "Cantidad": 100,
+        "Fecha": "2025-05-12",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Hogar",
+        "Tipo": "E",
+        "Cantidad": 100,
+        "Fecha": "2025-05-13",
+        "Periodo": "202505",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Hogar",
+        "Tipo": "E",
+        "Cantidad": 150,
+        "Fecha": "2025-05-15",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Regalos y donaciones",
+        "Tipo": "E",
+        "Cantidad": 100,
+        "Fecha": "2025-05-17",
+        "Periodo": "202505",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Regalos y donaciones",
+        "Tipo": "E",
+        "Cantidad": 100,
+        "Fecha": "2025-05-20",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Ahorro",
+        "Tipo": "I",
+        "Cantidad": 400,
+        "Fecha": "2025-05-24",
+        "Periodo": "202505",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Hogar",
+        "Tipo": "E",
+        "Cantidad": 200,
+        "Fecha": "2025-05-24",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Sueldo",
+        "Tipo": "I",
+        "Cantidad": 400,
+        "Fecha": "2025-05-24",
+        "Periodo": "202505",
+        "Alerta": null
+    },
+    {
+        "Categoria": "Regalos y donaciones",
+        "Tipo": "E",
+        "Cantidad": 200,
+        "Fecha": "2025-05-24",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Alimentos",
+        "Tipo": "E",
+        "Cantidad": 400,
+        "Fecha": "2025-05-24",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Entretenimiento",
+        "Tipo": "E",
+        "Cantidad": 400,
+        "Fecha": "2025-05-24",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Hogar",
+        "Tipo": "E",
+        "Cantidad": 300,
+        "Fecha": "2025-05-24",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Alimentos",
+        "Tipo": "E",
+        "Cantidad": 400,
+        "Fecha": "2025-05-24",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Entretenimiento",
+        "Tipo": "E",
+        "Cantidad": 500,
+        "Fecha": "2025-05-24",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    },
+    {
+        "Categoria": "Videojuegos",
+        "Tipo": "E",
+        "Cantidad": 5000,
+        "Fecha": "2025-05-24",
+        "Periodo": "202505",
+        "Alerta": "Se ha superado el limite superior, exceso de gasto"
+    }
+]

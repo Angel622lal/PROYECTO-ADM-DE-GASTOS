@@ -1,0 +1,79 @@
+[
+    {
+        "Categoria": "Alimentos",
+        "Tipo": "E",
+        "Limite inferior": 0,
+        "Limite superior": 500,
+        "Descripcion": "Gastos mensuales en comida, supermercado y restaurantes."
+    },
+    {
+        "Categoria": "Transporte",
+        "Tipo": "E",
+        "Limite inferior": 0,
+        "Limite superior": 300,
+        "Descripcion": "Gastos en gasolina, transporte publico o taxis."
+    },
+    {
+        "Categoria": "Vivienda",
+        "Tipo": "E",
+        "Limite inferior": 200,
+        "Limite superior": 1500,
+        "Descripcion": "Renta o hipoteca, mantenimiento del hogar y servicios basicos."
+    },
+    {
+        "Categoria": "Salud",
+        "Tipo": "E",
+        "Limite inferior": 0,
+        "Limite superior": 400,
+        "Descripcion": "Medicinas, consultas medicas, seguros de salud."
+    },
+    {
+        "Categoria": "Educacion",
+        "Tipo": "E",
+        "Limite inferior": 0,
+        "Limite superior": 600,
+        "Descripcion": "Colegiaturas, utiles escolares, cursos y capacitaciones."
+    },
+    {
+        "Categoria": "Entretenimiento",
+        "Tipo": "E",
+        "Limite inferior": 0,
+        "Limite superior": 250,
+        "Descripcion": "Cine, salidas, streaming y otros gastos recreativos."
+    },
+    {
+        "Categoria": "Ahorro",
+        "Tipo": "I",
+        "Limite inferior": 100,
+        "Limite superior": 1000,
+        "Descripcion": "Dinero destinado a cuentas de ahorro o inversiones."
+    },
+    {
+        "Categoria": "Sueldo",
+        "Tipo": "I",
+        "Limite inferior": 1000,
+        "Limite superior": 5000,
+        "Descripcion": "Ingreso regular por trabajo o actividades profesionales."
+    },
+    {
+        "Categoria": "Hogar",
+        "Tipo": "E",
+        "Limite inferior": 0,
+        "Limite superior": 200,
+        "Descripcion": "Compra de articulos para el hogar y limpieza."
+    },
+    {
+        "Categoria": "Regalos y donaciones",
+        "Tipo": "E",
+        "Limite inferior": 0,
+        "Limite superior": 150,
+        "Descripcion": "Regalos, caridad y apoyo a familiares o amigos."
+    },
+    {
+        "Categoria": "Videojuegos",
+        "Tipo": "E",
+        "Limite inferior": 2000,
+        "Limite superior": 4000,
+        "Descripcion": null
+    }
+]

@@ -1,0 +1,12 @@
+[
+    {
+        "Periodo": "202504",
+        "Cantidad": 6280,
+        "Alerta": null
+    },
+    {
+        "Periodo": "202505",
+        "Cantidad": -10650,
+        "Alerta": "El egreso ha superado al ahorro, posible adeudo"
+    }
+]
