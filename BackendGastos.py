@@ -13,6 +13,7 @@ AHORRO_JSON = "ahorro.json"
 class Usuario:
     lista_usuario = []
 
+    #Constructor de usuario y contraseña
     def __init__(self, nombre, password):
         self.nombre = nombre
         self.__pass = password
@@ -52,6 +53,7 @@ class Usuario:
 
 class Catelim:
     list_catelim = []
+    #Constructor de Categorias y limites
     def __init__(self, categoria, tipo, lim_inf, lim_sup, descripcion = None):
         self.categoria = categoria
         self.tipo = tipo
@@ -98,6 +100,7 @@ class Catelim:
 
 class IngEgr:
     list_ingegr = []
+    #Constructor de Ingreso/Egreso
     def __init__(self, categoria, tipo, cantidad, alerta = None):
         self.categoria = categoria
         self.tipo = tipo
@@ -156,7 +159,8 @@ class IngEgr:
             return alert
 
     #Si llega a ser de tipo E (egreso) en la funcion de arriba 
-    #Entra y valida si la suma de la categoria que se registro el egreso
+    #En validacion_lim entra y valida si la suma total de la categoria del egreso que se registro 
+    #rebasa los limite puestos por el usuario de la categoria en Catelim:lista catelim  y si rebasa saltara alerta
     @classmethod
     def validacion_lim(cls, egre):
         suma_totcat = 0
@@ -174,12 +178,13 @@ class IngEgr:
                 elif (suma_totcat > lim.lim_sup):
                     return "Se ha superado el limite superior, exceso de gasto"
 
-
 class Ahorro:
     list_ahorro = []
-    def __init__(self, periodo, cantidad, alerta = None):
+    #Constructor de ahorro
+    def __init__(self, periodo, cantidad, estatus = "AB", alerta = None):
         self.periodo = periodo
         self.cantidad = cantidad
+        self.estatus = estatus
         self.alerta = alerta
 
     #Imprimira el ahorro del periodo que des o el ultimo ahorro guardado en list_ahorro
@@ -194,16 +199,34 @@ class Ahorro:
             if Ahorro.list_ahorro:
                 return Ahorro.list_ahorro[-1].cantidad
             return 0
-    
-    #Imprimira el ahorro del anterior mes, con el objetivo que sea este la nueva sugerencia de ahorro
+        
+    #Retornara el ultimo ahorro de la lista Ahorro.list_ahorro 
+    #Y si no hay ninguno insertata uno nuevo con el periodo del dia de hoy y un ahorro de 0 
     @classmethod
-    def impr_ahorroant(cls, periodo):
-        fecha_anterior = periodo - relativedelta(months=1)
-        periodo_anterior = str(fecha_anterior.year * 100 + fecha_anterior.month)
+    def get_last_ahorro(cls):
         for aux in Ahorro.list_ahorro:
-            if aux.periodo == periodo_anterior:
-                return aux.cantidad
-        return None
+            periodo = Ahorro.list_ahorro[-1].periodo
+            cantidad = Ahorro.list_ahorro[-1].cantidad
+            estatus = Ahorro.list_ahorro[-1].estatus
+            alerta = Ahorro.list_ahorro[-1].alerta
+            aho1 = Ahorro(periodo, cantidad, estatus, alerta)  
+            return aho1
+        else:
+            today = date.today()
+            temp_per = str(today.year * 100 + today.month)
+            aho1 = Ahorro(temp_per, 0)  
+            Ahorro.inserta_aho(aho1)
+            return aho1
+    
+    #Devolvera el periodo del ahorro que este abierto "AB" 
+    #y con base a ese se le hara una validacion en el fronted
+    @classmethod
+    def impr_periodo_ab(cls):
+            for ahorro in Ahorro.list_ahorro:
+                if ahorro.estatus == "AB":
+                    return ahorro.periodo
+            else:
+                return None
 
     #Del list_ahorro guarda los datos a ahorro.json
     @classmethod
@@ -213,6 +236,7 @@ class Ahorro:
             data.append({
                 "Periodo": datos.periodo,
                 "Cantidad": datos.cantidad,
+                "Estatus": datos.estatus,
                 "Alerta": datos.alerta
             })
         with open(AHORRO_JSON, "w", encoding="utf-8") as file:
@@ -226,7 +250,7 @@ class Ahorro:
             with open(AHORRO_JSON, "r", encoding="utf-8") as file:
                 data = json.load(file)
                 for ahorro_dat in data:
-                    aho = Ahorro(ahorro_dat["Periodo"], ahorro_dat["Cantidad"], ahorro_dat["Alerta"])
+                    aho = Ahorro(ahorro_dat["Periodo"], ahorro_dat["Cantidad"], ahorro_dat["Estatus"], ahorro_dat["Alerta"])
                     Ahorro.list_ahorro.append(aho)
 
     #Cuando se haga un registro de un nuevo Ingreso/Egreso se le haran modificaciones al ahorro
@@ -235,7 +259,7 @@ class Ahorro:
     @classmethod
     def calculos_ahorro(cls, registro):
             for aux in Ahorro.list_ahorro:
-                if  (aux.periodo == registro.periodo):
+                if aux.estatus == "AB":
                     if registro.tipo == "E":
                         if registro.cantidad <= aux.cantidad:
                             aux.cantidad -= registro.cantidad
@@ -251,13 +275,18 @@ class Ahorro:
                             return None
                         return None
     
-    #Esta diseñado por si el usuario no hace el corte de mes el ultimo día de mes
-    #Cuando inicie la aplicacion automaticamente validara si hay un Ahorro para el nuevo mes (el mes en el que esta)
-    # creara Un ahorro de 0 con el periodo en el que esta (periodo armado en fronted)
+    #Hara el proceso de guardar en la lista y invocara el guardar_ahorros 
+    #para guardar todos los ahorros de la lista a json
     @classmethod
-    def inserta_auto(cls, periodo):
-        if not any(aux.periodo == periodo for aux in Ahorro.list_ahorro):
-            aho = Ahorro(periodo, 0)
-            Ahorro.list_ahorro.append(aho)
-            Ahorro.guardar_ahorros()
+    def inserta_aho(cls, ahorro):
+        Ahorro.list_ahorro.append(ahorro)
+        Ahorro.guardar_ahorros()
+
+    #De acuerdo al periodo del ahorro que este abierto se cerrara y no se le podra hacer ningun cambio
+    @classmethod
+    def cierra_periodo(cls, periodo):
+        for aux in Ahorro.list_ahorro:
+            if aux.periodo == periodo:
+                aux.estatus = "CE"
+
 
