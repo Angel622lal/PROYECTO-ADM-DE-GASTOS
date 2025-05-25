@@ -263,7 +263,7 @@ class GastosApp:
 
         categorias = [cat.categoria for cat in Catelim.list_catelim]
         ttk.Label(frame_busqueda, text="Categoría:", font=self.fuente_label).grid(row=0, column=0, padx=10, pady=5, sticky="e")
-        self.categoria_bus_combobox = ttk.Combobox(frame_busqueda, values=categorias, state="readonly", font=self.fuente_entry, width=20)
+        self.categoria_bus_combobox = ttk.Combobox(frame_busqueda, values=categorias, font=self.fuente_entry, width=20)
         self.categoria_bus_combobox.grid(row=0, column=1, padx=10, pady=5)
 
         ttk.Label(frame_busqueda, text="Egreso(E)/Ingreso(I):", font=self.fuente_label).grid(row=0, column=2, padx=10, pady=5, sticky="e")
