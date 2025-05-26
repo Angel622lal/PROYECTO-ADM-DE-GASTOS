@@ -101,12 +101,12 @@ class Catelim:
 class IngEgr:
     list_ingegr = []
     #Constructor de Ingreso/Egreso
-    def __init__(self, categoria, tipo, cantidad, alerta = None):
+    def __init__(self, categoria, tipo, cantidad, periodo, alerta = None):
         self.categoria = categoria
         self.tipo = tipo
         self.cantidad = cantidad
         self.fecha = date.today()
-        self.periodo = str(self.fecha.year * 100 + self.fecha.month)
+        self.periodo = periodo
         self.alerta = alerta
 
     #De la lista list_ingegr guarda al ingegr.json
@@ -137,10 +137,10 @@ class IngEgr:
                         categoria=ingreso_egr["Categoria"],
                         tipo=ingreso_egr["Tipo"],
                         cantidad=ingreso_egr["Cantidad"],
+                        periodo= ingreso_egr["Periodo"],
                         alerta=ingreso_egr["Alerta"]
                     )
                     Inee.fecha = date.fromisoformat(ingreso_egr["Fecha"])
-                    Inee.periodo = ingreso_egr["Periodo"]
                     IngEgr.list_ingegr.append(Inee)
     
     #Al crear un nuevo Ingreso/Egreso entra en la funcion
