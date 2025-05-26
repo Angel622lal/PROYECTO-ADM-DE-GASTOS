@@ -384,7 +384,7 @@ class GastosApp:
             if aux.categoria == categoria:
                 tipo = aux.tipo
 
-        registro = IngEgr(categoria, tipo, cantidad)
+        registro = IngEgr(categoria, tipo, cantidad, PERIODO_ACTUAL)
         mensaje_lim = IngEgr.registrar_ingegr(registro)
         mensaje_ahorro = Ahorro.calculos_ahorro(registro)
 
