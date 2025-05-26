@@ -44,15 +44,15 @@
     {
         "Categoria": "Ahorro",
         "Tipo": "I",
-        "Limite inferior": 100,
-        "Limite superior": 1000,
+        "Limite inferior": 0,
+        "Limite superior": 0,
         "Descripcion": "Dinero destinado a cuentas de ahorro o inversiones."
     },
     {
         "Categoria": "Sueldo",
         "Tipo": "I",
-        "Limite inferior": 1000,
-        "Limite superior": 5000,
+        "Limite inferior": 0,
+        "Limite superior": 0,
         "Descripcion": "Ingreso regular por trabajo o actividades profesionales."
     },
     {
@@ -74,6 +74,34 @@
         "Tipo": "E",
         "Limite inferior": 2000,
         "Limite superior": 4000,
+        "Descripcion": null
+    },
+    {
+        "Categoria": "Renta",
+        "Tipo": "E",
+        "Limite inferior": 3000,
+        "Limite superior": 4000,
+        "Descripcion": null
+    },
+    {
+        "Categoria": "Coche",
+        "Tipo": "E",
+        "Limite inferior": 4000,
+        "Limite superior": 8000,
+        "Descripcion": null
+    },
+    {
+        "Categoria": "Juguetes",
+        "Tipo": "E",
+        "Limite inferior": 400,
+        "Limite superior": 1000,
+        "Descripcion": null
+    },
+    {
+        "Categoria": "Libreta",
+        "Tipo": "E",
+        "Limite inferior": 300,
+        "Limite superior": 400,
         "Descripcion": null
     }
 ]
